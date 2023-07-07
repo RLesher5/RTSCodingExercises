@@ -32,8 +32,30 @@ public:
     }
 
     unordered_map<string, int> aboveBelow(vector<int> nums, int target) {
+        //Base Case Size Equals 0
+        if(nums.size() == 0){
+            return unordered_map<string, int> {{"above", 0}, {"below", 0}};
+        }
+        
+        //Base Case Size Equals 1
+        if(nums.size() == 1){
+            //Above Target
+            if(nums[0] > target){
+                return unordered_map<string, int> {{"above", 1}, {"below", 0}};
+            }
+            //Below Target
+            else if(nums[0] < target){
+                return unordered_map<string, int> {{"above", 0}, {"below", 1}};
+            }
+            //Equals Target
+            else{
+                return unordered_map<string, int> {{"above", 0}, {"below", 0}};
+            }
+        }
+        
         //Create output map
         unordered_map<string, int> count;
+        
     
         //Sort vector in increasing order
         sort(nums.begin(), nums.end());
@@ -70,7 +92,7 @@ int main() {
     cout << "Original String: " << str << endl;
     cout << "Rotated String:  " << s.stringRotation(str, num) << endl;
     
-    vector<int> nums = {1, 5, 2, 1, 10};
+    //vector<int> nums = {1, 5, 2, 1, 10};
     int val = 6;
     
     unordered_map<string, int> count = s.aboveBelow(nums, val);
