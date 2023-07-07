@@ -1,6 +1,7 @@
 # RTSCodingExercises
 
 Please write a class in the language of your choice that contains the following two public methods:
+<hr>
 
 Exercise 1) aboveBelow
 
@@ -15,6 +16,7 @@ Example usage:
 input: [1, 5, 2, 1, 10], 6
 output: { "above": 1, "below": 4 }
 
+<hr>
 Exercise 2) stringRotation
 
 Inputs:
