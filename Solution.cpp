@@ -23,10 +23,13 @@ public:
         
         //Reverse Prefix
         reverse(s.begin(), s.end()-i);
+
         //Reverse Suffix
         reverse(s.end()-i, s.end());
+
         //Reverse String
         reverse(s.begin(), s.end());
+
         //Return Rotated String
         return s;
     }
@@ -56,7 +59,6 @@ public:
         //Create output map
         unordered_map<string, int> count;
         
-    
         //Sort vector in increasing order
         sort(nums.begin(), nums.end());
         
@@ -92,10 +94,8 @@ int main() {
     cout << "Original String: " << str << endl;
     cout << "Rotated String:  " << s.stringRotation(str, num) << endl;
     
-    //vector<int> nums = {1, 5, 2, 1, 10};
+    vector<int> nums = {1, 5, 2, 1, 10};
     int val = 6;
-    
     unordered_map<string, int> count = s.aboveBelow(nums, val);
-
     cout << "{ above : " << count["above"] << " , below : " << count["below"] << " }" << endl;
 }
