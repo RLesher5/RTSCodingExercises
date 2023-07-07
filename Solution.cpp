@@ -98,4 +98,6 @@ int main() {
     int val = 6;
     unordered_map<string, int> count = s.aboveBelow(nums, val);
     cout << "{ above : " << count["above"] << " , below : " << count["below"] << " }" << endl;
+
+    return 0;
 }
