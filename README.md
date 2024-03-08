@@ -1,4 +1,4 @@
-# RTSCodingExercises
+# RTSCodingExercises - Interview
 
 Please write a class in the language of your choice that contains the following two public methods:
 <hr>
